@@ -12,7 +12,7 @@ class RobotDemo : public SimpleRobot
 	DoubleSolenoid shooterSole;//Festo
 	Compressor compressor;
 	Encoder shooterEnconder;
-	AxisCamera camera;
+	AxisCamera *camera;
 	
 public:
 	RobotDemo(): 
