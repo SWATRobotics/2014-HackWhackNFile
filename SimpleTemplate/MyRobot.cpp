@@ -12,6 +12,7 @@ class RobotDemo : public SimpleRobot
 	DoubleSolenoid shooterSole;//Festo
 	Compressor compressor;
 	Encoder shooterEnconder;
+	AxisCamera camera;
 	
 public:
 	RobotDemo(): 
@@ -30,6 +31,7 @@ public:
 		shooterEnconder(5,6,false)//uint32_t aChannel, uint32_t bChannel, bool reverseDirection=false, EncodingType encodingType=k4X
 	{
 		myRobot.SetExpiration(0.1);
+		camera = AxisCamera::GetInstance();
 	}
 
 	
